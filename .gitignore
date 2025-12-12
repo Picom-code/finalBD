@@ -1,0 +1,13 @@
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Not used in this project
+Kolod.csv
+XRP.csv
+
+# IDE
+.vscode/
+.idea/
+

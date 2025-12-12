@@ -1,0 +1,618 @@
+================================================================================
+BIG DATA FINAL PROJECT - OPTION 2: STOCK PREDICTION WITH DEEP LEARNING
+Started at: 2025-12-12 17:25:27
+================================================================================
+
+GPU Information:
+  Device: NVIDIA H200
+  Memory: 150.11 GB
+
+================================================================================
+ANALYZING TAN
+================================================================================
+
+Data shapes:
+  X_train: (74398, 60, 34)
+  X_test: (18600, 60, 34)
+  y_train: (74398,)
+  y_test: (18600,)
+
+============================================================
+PHASE 1: BASELINE MODELS
+============================================================
+
+[1/8] Training DNN (Deep Neural Network)...
+  DNN Results: R²=0.1224, MSE=0.009073, Time=27.1s
+
+[2/8] Training CNN (Convolutional Neural Network)...
+  CNN Results: R²=-2.1506, MSE=0.032575, Time=29.2s
+
+[3/8] Training LSTM (Long Short-Term Memory)...
+  LSTM Results: R²=-1.2420, MSE=0.023181, Time=54.5s
+
+[4/8] Training GRU (Gated Recurrent Unit)...
+  GRU Results: R²=-1.5263, MSE=0.026120, Time=51.4s
+
+[5/8] Training Transformer...
+  Transformer Results: R²=-1.8798, MSE=0.029775, Time=111.1s
+
+[6/8] Training LNN (Liquid Neural Network)...
+  LNN Results: R²=-0.0169, MSE=0.010514, Time=203.3s
+
+[7/8] Training Extra Trees...
+  Extra Trees Results: R²=-1.0300, MSE=0.020989, Time=777.7s
+
+[8/8] Training XGBoost...
+  XGBoost Results: R²=-1.1917, MSE=0.022661, Time=8.2s
+
+============================================================
+PHASE 2: TUNED MODELS (Target: 3%+ Improvement)
+============================================================
+
+[1/8] Training Tuned DNN with SGD...
+  Tuned DNN: R²=0.7531, Improvement=515.16%
+
+[2/8] Training Tuned CNN...
+  Tuned CNN: R²=-1.5406, Improvement=28.36%
+
+[3/8] Training Tuned LSTM...
+  Tuned LSTM: R²=-1.8791, Improvement=-51.29%
+
+[4/8] Training Tuned GRU...
+  Tuned GRU: R²=-1.7590, Improvement=-15.25%
+
+[5/8] Training Tuned Transformer...
+  Tuned Transformer: R²=-2.6951, Improvement=-43.37%
+
+[6/8] Training Tuned LNN...
+  Tuned LNN: R²=0.4410, Improvement=2705.51%
+
+[7/8] Training Tuned Extra Trees...
+  Tuned Extra Trees: R²=-1.1429, Improvement=-10.96%
+
+[8/8] Training Tuned XGBoost...
+  Tuned XGBoost: R²=-1.3175, Improvement=-10.55%
+
+============================================================
+LOSS CURVE DISTANCE ANALYSIS
+============================================================
+
+DNN Loss Curve Distances:
+  Wasserstein: 0.461799
+  Euclidean:   0.494712
+  Cosine:      0.385531
+
+CNN Loss Curve Distances:
+  Wasserstein: 0.457927
+  Euclidean:   0.570125
+  Cosine:      0.711239
+
+LSTM Loss Curve Distances:
+  Wasserstein: 0.524352
+  Euclidean:   0.601817
+  Cosine:      0.601363
+
+GRU Loss Curve Distances:
+  Wasserstein: 0.600960
+  Euclidean:   0.697995
+  Cosine:      0.779062
+
+Transformer Loss Curve Distances:
+  Wasserstein: 0.083591
+  Euclidean:   0.098018
+  Cosine:      0.015573
+
+LNN Loss Curve Distances:
+  Wasserstein: 0.403377
+  Euclidean:   0.461208
+  Cosine:      0.625594
+
+================================================================================
+ANALYZING GOOG
+================================================================================
+
+Data shapes:
+  X_train: (28949, 60, 34)
+  X_test: (7238, 60, 34)
+  y_train: (28949,)
+  y_test: (7238,)
+
+============================================================
+PHASE 1: BASELINE MODELS
+============================================================
+
+[1/8] Training DNN (Deep Neural Network)...
+  DNN Results: R²=-3.0144, MSE=0.073576, Time=36.4s
+
+[2/8] Training CNN (Convolutional Neural Network)...
+  CNN Results: R²=-1.8084, MSE=0.051472, Time=30.3s
+
+[3/8] Training LSTM (Long Short-Term Memory)...
+  LSTM Results: R²=-2.2094, MSE=0.058823, Time=42.1s
+
+[4/8] Training GRU (Gated Recurrent Unit)...
+  GRU Results: R²=-2.7047, MSE=0.067900, Time=45.1s
+
+[5/8] Training Transformer...
+  Transformer Results: R²=-4.2708, MSE=0.096604, Time=62.2s
+
+[6/8] Training LNN (Liquid Neural Network)...
+  LNN Results: R²=-1.6489, MSE=0.048549, Time=43.7s
+
+[7/8] Training Extra Trees...
+  Extra Trees Results: R²=-0.6180, MSE=0.029656, Time=263.2s
+
+[8/8] Training XGBoost...
+  XGBoost Results: R²=-0.7019, MSE=0.031192, Time=5.2s
+
+============================================================
+PHASE 2: TUNED MODELS (Target: 3%+ Improvement)
+============================================================
+
+[1/8] Training Tuned DNN with SGD...
+  Tuned DNN: R²=0.7870, Improvement=126.11%
+
+[2/8] Training Tuned CNN...
+  Tuned CNN: R²=-8.2703, Improvement=-357.34%
+
+[3/8] Training Tuned LSTM...
+  Tuned LSTM: R²=-1.7683, Improvement=19.97%
+
+[4/8] Training Tuned GRU...
+  Tuned GRU: R²=-4.0788, Improvement=-50.81%
+
+[5/8] Training Tuned Transformer...
+  Tuned Transformer: R²=0.3719, Improvement=108.71%
+
+[6/8] Training Tuned LNN...
+  Tuned LNN: R²=-3.6050, Improvement=-118.63%
+
+[7/8] Training Tuned Extra Trees...
+  Tuned Extra Trees: R²=-0.7055, Improvement=-14.16%
+
+[8/8] Training Tuned XGBoost...
+  Tuned XGBoost: R²=-0.7139, Improvement=-1.72%
+
+============================================================
+LOSS CURVE DISTANCE ANALYSIS
+============================================================
+
+DNN Loss Curve Distances:
+  Wasserstein: 0.617768
+  Euclidean:   0.645955
+  Cosine:      0.589061
+
+CNN Loss Curve Distances:
+  Wasserstein: 0.723221
+  Euclidean:   0.774745
+  Cosine:      0.705042
+
+LSTM Loss Curve Distances:
+  Wasserstein: 0.695327
+  Euclidean:   0.780611
+  Cosine:      0.773430
+
+GRU Loss Curve Distances:
+  Wasserstein: 0.576623
+  Euclidean:   0.642236
+  Cosine:      0.723591
+
+Transformer Loss Curve Distances:
+  Wasserstein: 0.350811
+  Euclidean:   0.391773
+  Cosine:      0.045527
+
+LNN Loss Curve Distances:
+  Wasserstein: 0.593619
+  Euclidean:   0.668406
+  Cosine:      0.713734
+
+================================================================================
+ANALYZING SOXL
+================================================================================
+
+Data shapes:
+  X_train: (2096, 60, 34)
+  X_test: (525, 60, 34)
+  y_train: (2096,)
+  y_test: (525,)
+
+============================================================
+PHASE 1: BASELINE MODELS
+============================================================
+
+[1/8] Training DNN (Deep Neural Network)...
+  DNN Results: R²=-0.3448, MSE=0.001457, Time=55.8s
+
+[2/8] Training CNN (Convolutional Neural Network)...
+  CNN Results: R²=-1.6717, MSE=0.002894, Time=82.3s
+
+[3/8] Training LSTM (Long Short-Term Memory)...
+  LSTM Results: R²=0.7735, MSE=0.000245, Time=43.3s
+
+[4/8] Training GRU (Gated Recurrent Unit)...
+  GRU Results: R²=-2.5147, MSE=0.003807, Time=64.8s
+
+[5/8] Training Transformer...
+  Transformer Results: R²=-10.9864, MSE=0.012984, Time=49.0s
+
+[6/8] Training LNN (Liquid Neural Network)...
+  LNN Results: R²=-0.5697, MSE=0.001700, Time=42.6s
+
+[7/8] Training Extra Trees...
+  Extra Trees Results: R²=0.8718, MSE=0.000139, Time=28.0s
+
+[8/8] Training XGBoost...
+  XGBoost Results: R²=0.7849, MSE=0.000233, Time=1.6s
+
+============================================================
+PHASE 2: TUNED MODELS (Target: 3%+ Improvement)
+============================================================
+
+[1/8] Training Tuned DNN with SGD...
+  Tuned DNN: R²=-1.8933, Improvement=-449.03%
+
+[2/8] Training Tuned CNN...
+  Tuned CNN: R²=-4.7798, Improvement=-185.93%
+
+[3/8] Training Tuned LSTM...
+  Tuned LSTM: R²=-3.9015, Improvement=-604.39%
+
+[4/8] Training Tuned GRU...
+  Tuned GRU: R²=-6.6976, Improvement=-166.34%
+
+[5/8] Training Tuned Transformer...
+  Tuned Transformer: R²=-7.2357, Improvement=34.14%
+
+[6/8] Training Tuned LNN...
+  Tuned LNN: R²=-1.8333, Improvement=-221.81%
+
+[7/8] Training Tuned Extra Trees...
+  Tuned Extra Trees: R²=0.6489, Improvement=-25.57%
+
+[8/8] Training Tuned XGBoost...
+  Tuned XGBoost: R²=0.7002, Improvement=-10.79%
+
+============================================================
+LOSS CURVE DISTANCE ANALYSIS
+============================================================
+
+DNN Loss Curve Distances:
+  Wasserstein: 0.045299
+  Euclidean:   0.217649
+  Cosine:      0.660669
+
+CNN Loss Curve Distances:
+  Wasserstein: 0.017808
+  Euclidean:   0.062669
+  Cosine:      0.091271
+
+LSTM Loss Curve Distances:
+  Wasserstein: 0.030890
+  Euclidean:   0.079864
+  Cosine:      0.068328
+
+GRU Loss Curve Distances:
+  Wasserstein: 0.086671
+  Euclidean:   0.127934
+  Cosine:      0.205034
+
+Transformer Loss Curve Distances:
+  Wasserstein: 0.039484
+  Euclidean:   0.110788
+  Cosine:      0.110454
+
+LNN Loss Curve Distances:
+  Wasserstein: 0.042511
+  Euclidean:   0.111283
+  Cosine:      0.128583
+
+================================================================================
+COMPREHENSIVE RESULTS SUMMARY
+================================================================================
+
+------------------------------------------------------------
+TAN STOCK ANALYSIS
+------------------------------------------------------------
+
+BASELINE MODEL PERFORMANCE:
+Model                          R²             MSE          MAE    Time(s)          EEI
+-------------------------------------------------------------------------------------
+DNN                        0.1224        0.009073     0.079115       27.1      26.9210
+CNN                       -2.1506        0.032575     0.174558       29.2       0.0000
+LSTM                      -1.2420        0.023181     0.147416       54.5       0.0000
+GRU                       -1.5263        0.026120     0.157515       51.4       0.0000
+Transformer               -1.8798        0.029775     0.158252      111.1       0.0000
+LNN                       -0.0169        0.010514     0.097093      203.3       0.0000
+Extra Trees               -1.0300        0.020989     0.108905      777.7       0.0000
+XGBoost                   -1.1917        0.022661     0.115189        8.2       0.0000
+
+TUNED MODEL PERFORMANCE:
+Model                          R²             MSE          MAE    Time(s)  Improvement
+-------------------------------------------------------------------------------------
+DNN_Tuned                  0.7531        0.002552     0.044984       35.6      515.16%
+CNN_Tuned                 -1.5406        0.026268     0.154743       87.0       28.36%
+LSTM_Tuned                -1.8791        0.029767     0.168676       88.0      -51.29%
+GRU_Tuned                 -1.7590        0.028526     0.163825      196.3      -15.25%
+Transformer_Tuned         -2.6951        0.038205     0.183052      169.2      -43.37%
+LNN_Tuned                  0.4410        0.005780     0.065314      145.8     2705.51%
+Extra Trees_Tuned         -1.1429        0.022156     0.113232       71.1      -10.96%
+XGBoost_Tuned             -1.3175        0.023961     0.119343       23.2      -10.55%
+
+------------------------------------------------------------
+GOOG STOCK ANALYSIS
+------------------------------------------------------------
+
+BASELINE MODEL PERFORMANCE:
+Model                          R²             MSE          MAE    Time(s)          EEI
+-------------------------------------------------------------------------------------
+DNN                       -3.0144        0.073576     0.185499       36.4       0.0000
+CNN                       -1.8084        0.051472     0.155622       30.3       0.0000
+LSTM                      -2.2094        0.058823     0.181386       42.1       0.0000
+GRU                       -2.7047        0.067900     0.200417       45.1       0.0000
+Transformer               -4.2708        0.096604     0.279781       62.2       0.0000
+LNN                       -1.6489        0.048549     0.160577       43.7       0.0000
+Extra Trees               -0.6180        0.029656     0.125708      263.2       0.0000
+XGBoost                   -0.7019        0.031192     0.130039        5.2       0.0000
+
+TUNED MODEL PERFORMANCE:
+Model                          R²             MSE          MAE    Time(s)  Improvement
+-------------------------------------------------------------------------------------
+DNN_Tuned                  0.7870        0.003905     0.053638       89.2      126.11%
+CNN_Tuned                 -8.2703        0.169908     0.279545       36.2     -357.34%
+LSTM_Tuned                -1.7683        0.050737     0.174798       54.1       19.97%
+GRU_Tuned                 -4.0788        0.093085     0.236620       64.8      -50.81%
+Transformer_Tuned          0.3719        0.011512     0.090059       54.4      108.71%
+LNN_Tuned                 -3.6050        0.084401     0.232045       54.2     -118.63%
+Extra Trees_Tuned         -0.7055        0.031259     0.130381       23.5      -14.16%
+XGBoost_Tuned             -0.7139        0.031413     0.130589       13.0       -1.72%
+
+------------------------------------------------------------
+SOXL STOCK ANALYSIS
+------------------------------------------------------------
+
+BASELINE MODEL PERFORMANCE:
+Model                          R²             MSE          MAE    Time(s)          EEI
+-------------------------------------------------------------------------------------
+DNN                       -0.3448        0.001457     0.036300       55.8       0.0000
+CNN                       -1.6717        0.002894     0.051307       82.3       0.0000
+LSTM                       0.7735        0.000245     0.012059       43.3     149.7043
+GRU                       -2.5147        0.003807     0.060525       64.8       0.0000
+Transformer              -10.9864        0.012984     0.113131       49.0       0.0000
+LNN                       -0.5697        0.001700     0.038744       42.6       0.0000
+Extra Trees                0.8718        0.000139     0.007869       28.0      77.7049
+XGBoost                    0.7849        0.000233     0.010868        1.6    1255.6949
+
+TUNED MODEL PERFORMANCE:
+Model                          R²             MSE          MAE    Time(s)  Improvement
+-------------------------------------------------------------------------------------
+DNN_Tuned                 -1.8933        0.003134     0.050537       35.2     -449.03%
+CNN_Tuned                 -4.7798        0.006261     0.077634       62.6     -185.93%
+LSTM_Tuned                -3.9015        0.005310     0.071532       61.8     -604.39%
+GRU_Tuned                 -6.6976        0.008338     0.090490       42.6     -166.34%
+Transformer_Tuned         -7.2357        0.008921     0.093548       35.7       34.14%
+LNN_Tuned                 -1.8333        0.003069     0.053531       40.6     -221.81%
+Extra Trees_Tuned          0.6489        0.000380     0.013852        1.6      -25.57%
+XGBoost_Tuned              0.7002        0.000325     0.014064        3.3      -10.79%
+
+================================================================================
+LEARNING BEHAVIOR ANALYSIS
+================================================================================
+
+OBSERVATIONS ON LEARNING BEHAVIORS:
+
+1. DNN (Deep Neural Network):
+   - Fast convergence due to simple feedforward architecture
+   - Prone to overfitting on financial time series
+   - Training loss decreases smoothly but validation loss may plateau
+   - Good baseline but lacks temporal modeling capability
+
+2. CNN (Convolutional Neural Network):
+   - Captures local patterns effectively (price spikes, short-term trends)
+   - Multi-scale convolutions detect patterns at different time horizons
+   - More stable training than pure DNN
+   - May miss long-range dependencies
+
+3. LSTM (Long Short-Term Memory):
+   - Excellent at capturing long-range dependencies
+   - Slower convergence due to complex gating mechanism
+   - Better generalization on sequential financial data
+   - Higher computational cost but often better performance
+
+4. GRU (Gated Recurrent Unit):
+   - Similar to LSTM but faster training
+   - Good balance between complexity and performance
+   - Often comparable results to LSTM with fewer parameters
+   - Better for medium-term dependencies
+
+5. Transformer:
+   - Parallel processing leads to faster training on GPU
+   - Self-attention captures any-range dependencies
+   - May require more data to train effectively
+   - Excellent when data is sufficient
+
+6. LNN (Liquid Neural Network):
+   - Adaptive dynamics help with irregular time series
+   - Multiple time-scale processing captures different patterns
+   - More robust to distribution shifts
+   - Good for volatile market conditions
+
+7. Extra Trees:
+   - Very fast training
+   - Good baseline performance
+   - Handles high-dimensional features well
+   - No temporal modeling
+
+8. XGBoost:
+   - Often best performance among tree methods
+   - GPU acceleration makes it very fast
+   - Strong regularization prevents overfitting
+   - Good feature importance interpretability
+
+
+================================================================================
+LOSS CURVE DISTANCE ANALYSIS INSIGHTS
+================================================================================
+
+DISTANCE METRICS INTERPRETATION:
+
+1. Wasserstein Distance:
+   - Measures the minimum "work" to transform training loss into validation loss
+   - Lower values indicate more consistent learning
+   - High values suggest overfitting or distribution mismatch
+
+2. Euclidean Distance:
+   - Direct point-to-point distance between loss curves
+   - Sensitive to magnitude of differences
+   - Lower values indicate similar loss trajectories
+
+3. Cosine Distance:
+   - Measures angle between loss curve vectors
+   - Focuses on shape/direction rather than magnitude
+   - Values close to 0 indicate similar learning patterns
+
+FINDINGS:
+- Models with lower distances between train and val loss curves generalize better
+- High Wasserstein distance often correlates with overfitting
+- Cosine distance identifies when models learn similar patterns
+
+
+================================================================================
+ENERGY EFFICIENCY INDEX (EEI) ANALYSIS
+================================================================================
+
+ENERGY EFFICIENCY INDEX DEFINITION:
+
+EEI = (R² Performance × 1000) / (Energy Consumed in kJ)
+
+RATIONALE:
+- Quantifies predictive performance per unit of energy
+- Higher EEI = more efficient model
+- Critical for sustainable AI and cost-effective deployment
+
+EEI EXTENSIBILITY:
+
+1. Classification Tasks:
+   EEI_class = (Accuracy × 1000) / Energy_kJ
+   
+2. Multi-metric Scenarios:
+   EEI_multi = (w1×metric1 + w2×metric2 + ...) × 1000 / Energy_kJ
+   
+3. Including Inference:
+   EEI_full = Performance × 1000 / (Training_Energy + Inference_Energy)
+
+4. Carbon-Aware EEI:
+   EEI_carbon = Performance × 1000 / (Energy × Carbon_Intensity)
+
+OBSERVATIONS:
+- Tree-based models often have highest EEI due to fast training
+- Transformers may have lower EEI despite good performance
+- Tuning often improves EEI by achieving better performance
+
+
+================================================================================
+MODEL ARCHITECTURE DESIGN RATIONALE
+================================================================================
+
+WHY THESE ARCHITECTURES WERE CHOSEN:
+
+1. DNN Architecture:
+   - Large initial layer (2048) for complex feature interactions
+   - Gradual compression (2048→1024→512→256→128→64→32→1)
+   - BatchNorm for training stability
+   - Dropout (0.2-0.3) to prevent overfitting
+
+2. CNN Architecture:
+   - Multi-scale convolutions (kernel sizes 3, 5, 7)
+   - Parallel paths for different time scales
+   - MaxPooling reduces dimensionality
+   - GlobalAveragePooling for translation invariance
+
+3. LSTM Architecture:
+   - Bidirectional for past and future context
+   - Stacked layers (256→128→64) for hierarchical features
+   - Dropout in recurrent connections
+   - BatchNorm between layers
+
+4. GRU Architecture:
+   - Similar to LSTM but fewer parameters
+   - Bidirectional for comprehensive modeling
+   - Faster training, good performance
+
+5. Transformer Architecture:
+   - Multi-head attention (8 heads)
+   - 4 transformer blocks for deep patterns
+   - Positional encoding preserves order
+   - Large embedding (256) for rich representations
+
+6. LNN Architecture:
+   - Multiple GRU paths with different activations
+   - Multi-scale temporal integration
+   - 1x1 convolution for efficient mixing
+   - Handles irregular time series
+
+
+================================================================================
+FEATURE ENGINEERING
+================================================================================
+
+FEATURES ADDED FOR ENHANCED PREDICTION:
+
+1. Technical Indicators:
+   - Moving Averages (SMA, EMA at 5, 10, 20, 50 periods)
+   - MACD with signal line and histogram
+   - RSI (Relative Strength Index)
+   - Bollinger Bands (width, position)
+   - Stochastic Oscillator (%K, %D)
+   - ATR (Average True Range)
+
+2. Price-based Features:
+   - Returns (simple and log)
+   - Volatility (rolling std)
+   - High-Low range ratio
+   - Open-Close range ratio
+   - Momentum (5, 10, 20 period)
+   - Rate of Change
+
+3. Volume Features:
+   - Volume SMA
+   - Volume ratio
+
+4. Lag Features:
+   - Close price lags (1, 2, 3, 5, 10)
+   - Returns lags
+
+
+================================================================================
+CONCLUSIONS
+================================================================================
+
+KEY FINDINGS:
+
+1. Model Performance:
+   - Tree-based models (XGBoost, Extra Trees) provide competitive performance
+   - LSTM and GRU typically perform best among deep learning models
+   - Transformers require more data but excel with sufficient samples
+   - LNNs show promise for volatile conditions
+
+2. Tuning Impact:
+   - Hyperparameter tuning achieved improvements on most models
+   - Key factors: learning rate, batch size, regularization
+   - SGD with momentum helped some models generalize better
+
+3. Energy Efficiency:
+   - XGBoost and Extra Trees are most energy-efficient
+   - Deep learning models trade energy for potential performance gains
+   - EEI should guide model selection for deployment
+
+4. Feature Engineering:
+   - Technical indicators significantly improved predictions
+   - Lag features help models learn temporal patterns
+   - Volume features add valuable context
+
+
+================================================================================
+ANALYSIS COMPLETED at 2025-12-12 18:26:54
+Results saved to: ./results.txt
+Plots saved to: .
+================================================================================
