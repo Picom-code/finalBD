@@ -20,6 +20,7 @@ import warnings
 import random
 import gc
 from datetime import datetime
+from pathlib import Path
 from typing import Dict, List, Tuple, Any
 
 warnings.filterwarnings('ignore')
@@ -70,7 +71,8 @@ except:
     print("pynvml not available, will use time-based EEI")
 
 # Output file
-OUTPUT_FILE = "./results.txt"
+BASE_DIR = Path(__file__).resolve().parent
+OUTPUT_FILE = BASE_DIR / "results.txt"
 
 def log_output(message, file_handle=None):
     """Print to console and write to file"""
@@ -1314,7 +1316,7 @@ def run_stock_analysis(stock_file, stock_name, output_dir, f_out):
 
 def main():
     """Main execution function"""
-    output_dir = "."
+    output_dir = str(BASE_DIR)
     
     with open(OUTPUT_FILE, 'w') as f_out:
         log_output("="*80, f_out)
@@ -1331,9 +1333,9 @@ def main():
             log_output("  No GPU found!", f_out)
         
         stocks = {
-            'TAN': './TAN.csv',
-            'GOOG': './GOOG.csv',
-            'SOXL': './SOXL.csv'
+            'TAN': str(BASE_DIR / "TAN.csv"),
+            'GOOG': str(BASE_DIR / "GOOG.csv"),
+            'SOXL': str(BASE_DIR / "SOXL.csv")
         }
         
         all_results = {}
